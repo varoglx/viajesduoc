@@ -15,7 +15,7 @@
             </div>
             <div padding>
               <ion-item>
-                <ion-input name="email" type="email" placeholder="your@email.com" ngModel required></ion-input>
+                <ion-input name="email" [(ngModel)]="userInput" type="email" placeholder="your@email.com" ngModel required></ion-input>
               </ion-item>
               <ion-item>
                 <ion-input name="password" type="password" placeholder="Password" ngModel required></ion-input>
@@ -31,7 +31,10 @@
 
 
     <div id="container">
+      <p>El usuario actual es: {{ user }}</p>
       <p><a target="_self" rel="noopener noreferrer" href="register" style="color:black">Crear Cuenta</a></p>
+      <p><a target="_self" rel="noopener noreferrer" href="recuperar-pass" style="color:black">Recuperar Contraseña</a></p>
+      <ion-button (click)="updateUser(userInput)">Actualizar Usuario</ion-button>
     </div>
   </ion-content>
 
