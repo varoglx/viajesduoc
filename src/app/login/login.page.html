@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Ingreso</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="floating">Nombre de Usuario</ion-label>
+          <ion-input type="text" [(ngModel)]="username"></ion-input>  <!-- Vincula con la variable username -->
+      </ion-item>
+     
+      <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" [(ngModel)]="password"></ion-input>  <!-- Vincula con la variable password -->
+      </ion-item>
+      </ion-col>
+      <ion-col size="12">
+        <ion-button expand="block" color="primary" (click)="Ingresar()">Ingresar</ion-button>
+      </ion-col>
+      <ion-col size="12">
+        <ion-button fill="clear" expand="block" (click)="resetPassword()">¿Olvidaste tu contraseña?</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
