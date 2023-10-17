@@ -23,7 +23,15 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule),
     canActivate: [AuthGuard]
+  },  {
+    path: 'programar-viaje',
+    loadChildren: () => import('./programar-viaje/programar-viaje.module').then( m => m.ProgramarViajePageModule)
   },
+  {
+    path: 'buscr-viaje',
+    loadChildren: () => import('./buscr-viaje/buscr-viaje.module').then( m => m.BuscrViajePageModule)
+  },
+
   // ... otras rutas
 ];
 
