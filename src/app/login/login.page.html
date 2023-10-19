@@ -10,19 +10,19 @@
       <ion-col size="12">
         <ion-item>
           <ion-label position="floating">Nombre de Usuario</ion-label>
-          <ion-input type="text" [(ngModel)]="username"></ion-input>  <!-- Vincula con la variable username -->
+          <ion-input type="text" ></ion-input>  <!-- Vincula con la variable username -->
       </ion-item>
      
       <ion-item>
           <ion-label position="floating">Contraseña</ion-label>
-          <ion-input type="password" [(ngModel)]="password"></ion-input>  <!-- Vincula con la variable password -->
+          <ion-input type="password" ></ion-input>  <!-- Vincula con la variable password -->
       </ion-item>
       </ion-col>
       <ion-col size="12">
-        <ion-button expand="block" color="primary" (click)="Ingresar()">Ingresar</ion-button>
+        <ion-button expand="block" color="primary" [routerLink]="['/home']">Ingresar</ion-button>
       </ion-col>
       <ion-col size="12">
-        <ion-button fill="clear" expand="block" (click)="resetPassword()">¿Olvidaste tu contraseña?</ion-button>
+        <ion-button fill="clear" expand="block" [routerLink]="['/reset-password']">¿Olvidaste tu contraseña?</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>
