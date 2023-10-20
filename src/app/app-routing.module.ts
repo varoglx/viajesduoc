@@ -16,20 +16,24 @@ const routes: Routes = [
   },
   {
     path: 'reset-password',
-    loadChildren: () => import('./reset-password/reset-password.module').then( m => m.ResetPasswordPageModule)
+    loadChildren: () => import('./reset-password/reset-password.module').then( m => m.ResetPasswordPageModule),
+    
     
   },
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule),
     canActivate: [AuthGuard]
-  },  {
+  },
+  {
     path: 'programar-viaje',
-    loadChildren: () => import('./programar-viaje/programar-viaje.module').then( m => m.ProgramarViajePageModule)
+    loadChildren: () => import('./programar-viaje/programar-viaje.module').then( m => m.ProgramarViajePageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'buscr-viaje',
-    loadChildren: () => import('./buscr-viaje/buscr-viaje.module').then( m => m.BuscrViajePageModule)
+    loadChildren: () => import('./buscr-viaje/buscr-viaje.module').then( m => m.BuscrViajePageModule),
+    canActivate: [AuthGuard]
   },
 
   // ... otras rutas

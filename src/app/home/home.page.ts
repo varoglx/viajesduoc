@@ -31,5 +31,12 @@ export class HomePage {
   rutaProgramarViaje(){
     
   }
-  constructor(private router: Router) {}
+
+  logout(){
+    this.router.navigate(['/login']);
+    const loggedIn = this.authService.login('','');
+    
+    
+  }
+  constructor(private router: Router,private authService: AuthService) {}
 }

@@ -17,11 +17,12 @@ export class ResetPasswordPage implements OnInit {
 
   ngOnInit() {
   }
-  resetPassword() {
+  reset(){
+    this.router.navigate(['/login']);
+    const loggedIn = this.authService.login('','');
     
-  
     
-  } 
+  }
 
 }
 

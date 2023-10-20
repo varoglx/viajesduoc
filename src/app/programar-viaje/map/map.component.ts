@@ -8,8 +8,8 @@ import { GmapService } from './../../services/gmap.service';
 export class MapComponent  implements OnInit {
   @ViewChild('map', {static: true}) mapElementRef: ElementRef;
   googleMaps: any;
-  source: any = { lat: 28.651798, lng: 77.183022 };
-  dest: any = { lat: 28.5167287, lng: 77.3187642 };
+  source: any = { lat: -33.0336892, lng: -71.535759 };
+  dest: any = { lat: -33.0336892, lng: -71.535759 };
 
   constructor(
     private maps: GmapService,
