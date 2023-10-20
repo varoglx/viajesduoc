@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { ProgramarViajePageRoutingModule } from './programar-viaje-routing.module';
 
 import { ProgramarViajePage } from './programar-viaje.page';
+import { MapComponent } from './map/map.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { ProgramarViajePage } from './programar-viaje.page';
     IonicModule,
     ProgramarViajePageRoutingModule
   ],
-  declarations: [ProgramarViajePage]
+  declarations: [ProgramarViajePage,MapComponent]
 })
 export class ProgramarViajePageModule {}

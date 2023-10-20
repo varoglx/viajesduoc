@@ -1,6 +1,14 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>buscr-viaje</ion-title>
+    <ion-searchbar
+      search-icon="search-circle" 
+      animated="true" 
+      show-clear-button="focus" 
+      clear-icon="trash-bin"
+      debounce="800" 
+      placeholder="Search for area, street..."
+      (ionInput)="onSearchChange($event)">
+    </ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
