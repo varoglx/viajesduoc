@@ -34,7 +34,11 @@ const routes: Routes = [
     path: 'buscr-viaje',
     loadChildren: () => import('./buscr-viaje/buscr-viaje.module').then( m => m.BuscrViajePageModule),
     canActivate: [AuthGuard]
+  },  {
+    path: 'crearusuario',
+    loadChildren: () => import('./crearusuario/crearusuario.module').then( m => m.CrearusuarioPageModule)
   },
+
 
   // ... otras rutas
 ];
