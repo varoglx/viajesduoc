@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Nueva Página
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="submitForm()" #formulario="ngForm" *ngFor="let item of jsonData; let i = index">
+    <ion-item>
+      <ion-label position="stacked">Nombre</ion-label>
+      <ion-input name="nombre" [(ngModel)]="formData.nombre" required></ion-input>
+      <p>      {{ i + 1 }} - Nombre: {{ item.nombre }} Contraseña: {{ item.contrasenna }}</p>
+    </ion-item>
+    <ion-button expand="full" type="submit">Enviar</ion-button>
+  </form>
+</ion-content>
+
