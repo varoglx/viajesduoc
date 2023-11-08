@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Bienvenido, {{ nombreUsuario }} <ion-button (click)="logout()" >Cerrar Sesión</ion-button></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <br><br>
+  <ion-card>
+
+
+   <br><br>
+  
+
+    <ion-card-header>
+      <ion-card-title>Opciones de Viaje</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button expand="block" color="primary" [routerLink]="['/programar-viaje']"><br>Programar un Viaje</ion-button>
+      <ion-button expand="block" color="secondary" [routerLink]="['/buscr-viaje']"><br>Buscar un Viaje</ion-button>
+    </ion-card-content>
+    <br><br>
+</ion-card>
+</ion-content>

@@ -6,10 +6,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./listar-usuarios.page.scss'],
 })
 export class ListarUsuariosPage implements OnInit {
-  formData: { nombre: string; contrasenna: string } = {
-    nombre: '',
-    contrasenna: '',
-  };
+
   jsonData: any[];
   constructor(private http: HttpClient) { }
   ngOnInit() {
@@ -22,13 +19,34 @@ export class ListarUsuariosPage implements OnInit {
       // Aquí puedes realizar cualquier procesamiento adicional que necesites con los datos.
     });
   }
-    submitForm() {
-    // Realizar una solicitud POST con HttpClient
-    const url = 'URL_de_tu_servidor';
-    this.http.post(url, this.formData).subscribe((response) => {
-      console.log('Respuesta del servidor:', response);
+  submitForm(i: number) {
+    const form = document.forms[i];
+    const formData = new FormData(form);
+    
+    fetch(form.action, {
+      method: 'POST',
+      body: formData,
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Respuesta del servidor:', data);
+      this.ngOnInit();
     });
   }
+
+  deleteUser(id: number) {
+    const deleteUrl = 'http://localhost:5000/delete_usuario/' + id; // Reemplaza con la URL correcta
+    console.log('enviado')
+    fetch(deleteUrl, {
+      method: 'POST',
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Respuesta del servidor:', data);
+      this.ngOnInit();
+    });
+  }
+  
 
 }
 
