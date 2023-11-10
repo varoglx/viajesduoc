@@ -21,18 +21,11 @@ export class RegistrarUsuarioPage implements OnInit {
     formData.append('usuario', this.usuario); 
     formData.append('contrasena', this.contrasena); 
   
-    const registerUrl = 'http://18.230.155.252:80/registrar_usuario/';
-    
-
-    fetch(registerUrl, {
-      method: 'POST',
-      body: formData,
-    })
-    .then(response => response.json())
-    .then(data => {
-      console.log('Respuesta del servidor:', data);
-      
-    });
+    this.http.post('url_de_tu_api/registrar_usuario', formData)
+      .subscribe(response => {
+        console.log(response);
+        // Manejar la respuesta según tus necesidades
+      });
 
 
 
