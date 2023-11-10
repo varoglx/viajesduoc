@@ -18,19 +18,24 @@ export class RegistrarUsuarioPage implements OnInit {
     console.log('usuario:', this.usuario);
     console.log('contrasena:', this.contrasena);
     const formData = new FormData();
-    formData.append('usuario', this.usuario); // Reemplaza 'valor_usuario' con el valor real del usuario
-    formData.append('contrasena', this.contrasena); // Reemplaza 'valor_contrasena' con el valor real de la contraseña
+    formData.append('usuario', this.usuario); 
+    formData.append('contrasena', this.contrasena); 
   
     const registerUrl = 'http://18.230.155.252:80/registrar_usuario/';
-  
-    this.http.post(registerUrl, formData).subscribe(
-      (data) => {
-        console.log('Respuesta del servidor:', data);
-      },
-      (error) => {
-        console.error('Error en la solicitud:', error);
-      }
-    );
+    
+
+    fetch(registerUrl, {
+      method: 'POST',
+      body: formData,
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Respuesta del servidor:', data);
+      
+    });
+
+
+
   }
 
 }
