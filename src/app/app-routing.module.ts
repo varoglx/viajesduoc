@@ -38,6 +38,10 @@ const routes: Routes = [
     path: 'listar-usuarios',
     loadChildren: () => import('./listar-usuarios/listar-usuarios.module').then( m => m.ListarUsuariosPageModule)
   },
+  {
+    path: 'registrar-usuario',
+    loadChildren: () => import('./registrar-usuario/registrar-usuario.module').then( m => m.RegistrarUsuarioPageModule)
+  },
 
 
   // ... otras rutas
