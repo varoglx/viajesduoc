@@ -21,7 +21,7 @@ export class RegistrarUsuarioPage implements OnInit {
     formData.append('usuario', this.usuario); 
     formData.append('contrasena', this.contrasena); 
   
-    this.http.post('url_de_tu_api/registrar_usuario', formData)
+    this.http.post('http://18.230.155.252:80/registrar_usuario', formData)
       .subscribe(response => {
         console.log(response);
         // Manejar la respuesta según tus necesidades
