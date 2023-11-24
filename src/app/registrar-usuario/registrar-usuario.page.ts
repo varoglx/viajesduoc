@@ -23,7 +23,7 @@ export class RegistrarUsuarioPage implements OnInit {
     formData.append('contrasena', this.contrasena); 
     formData.append('correo', this.correo); 
   
-    this.http.post('http://18.230.155.252:80/registrar_usuario', formData)
+    this.http.post('http://18.231.154.125/registrar_usuario', formData)
       .subscribe(response => {
         console.log(response);
         // Manejar la respuesta según tus necesidades
