@@ -9,6 +9,7 @@
   <ion-card>
     <ion-list>
       <ion-button expand="full" (click)="ngOnInit()" >Actualizar</ion-button>
+      <ion-button expand="full" color="secondary" [routerLink]="['/login']"><br>login</ion-button>
       <br><br><br>
       <ion-col size="6" *ngFor="let item of jsonData; let i = index">
         
